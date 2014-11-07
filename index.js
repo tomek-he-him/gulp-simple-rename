@@ -22,7 +22,7 @@ module.exports = function (renameFunction) { 'use strict';
 
     var relativePath = path.relative(file.base, file.path)
       ;
-    relativePath = renameFunction(relativePath);
+    relativePath = renameFunction(relativePath, file);
     file.path = path.join(file.base, relativePath);
 
     this.emit('data', file);
