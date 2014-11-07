@@ -24,6 +24,8 @@ module.exports = function (renameFunction) { 'use strict';
       ;
     relativePath = renameFunction(relativePath);
     file.path = path.join(file.base, relativePath);
+
+    this.emit('data', file);
   };
 
   endStream = function endStream () { this.emit('end'); };
