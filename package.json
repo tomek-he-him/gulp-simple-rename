@@ -1,0 +1,20 @@
+{ "name": "gulp-simple-rename"
+, "version": "0.0.0"
+, "description": "A simpler approach to renaming files in gulp"
+
+, "contributors":
+  [ { "name": "Tomek Wiszniewski"
+    , "email": "<t.wiszniewski@gmail.com>"
+    }
+  ]
+
+, "repository":
+  { "type": "git"
+  , "url": "https://github.com/tomekwi/gulp-es6-module.git"
+  }
+
+, "dependencies":
+  { "gulp-util": "3.0.1"
+  , "through": "2.3.6"
+  }
+}
