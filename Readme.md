@@ -33,7 +33,7 @@ simpleRename(renamingFunction)
 
 #### `renamingFunction` _[Function]_
 
-The single argument for the function `simpleRename` should be a simple function. Fed with the relative path of a file, it should return the new relative path.
+The argument to `simpleRename` should be a simple function. Fed with the relative path of a file, it should return the new relative path.
 
 ##### arguments
 The renaming function is passed the following arguments:
