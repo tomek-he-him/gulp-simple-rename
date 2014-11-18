@@ -8,34 +8,43 @@ Usage
 -----
 
 ```js
-var simpleRename = require('gulp-simple-rename');
-var today = new Date().toISOString().substr(0, 10));
+var gulp = require('gulp');
+var rename = require('gulp-simple-rename');
+var today = new Date().toISOString().substr(0, 10)); // e.g. 2014-11-18
 
-gulp.src('src/*.js')
-    .pipe(simpleRename(function (relativePath) {
-        return relativePath.replace(/(today)/, today);
+
+// Having a file "src/log for (today).txt",
+gulp.src('src/*')
+    .pipe(rename(function (path) {
+        return path.replace(/(today)/, today);
         }))
+    .pipe(gulp.dest('dist'))
     ;
+// …we get it copied over to "dest/log for 2014-11-18.txt".
 ```
 
 
 API
 ---
 
-The function `simpleRename(renamingFunction)` takes a single argument:
+```js
+simpleRename(renamingFunction)
+```
 
-### `renamingFunction` _[Function]_
+#### `renamingFunction` _[Function]_
 
-#### arguments
+The single argument for the function `simpleRename` should be a simple function. Fed with the relative path of a file, it should return the new relative path.
+
+##### arguments
 The renaming function is passed the following arguments:
 
 - `relativePath` _[String]_ – The path of the streamed file, relative to the base directory (this is the first directory found by a glob – the package [glob-stream][], used by gulp, can tell you more about that.)
 
-- `originalFile` _[File]_ – This parameter gives access to the raw [Vinyl file][] being processed by gulp. In many situations you'll be fine leaving it out.
+- `originalFile` _[File]_ – This argument gives access to the raw [Vinyl file][] object being processed by gulp. In most situations you should be fine without it.
 
-#### return value
+##### return value
 
-The renaming function should return the new relative path for the file _[String]_.
+The renaming function should return the new relative path for the file, as a _[String]_.
 
 
 Why use it
