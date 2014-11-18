@@ -1,6 +1,9 @@
 { "name": "gulp-simple-rename"
 , "version": "0.0.0"
-, "description": "A simpler approach to renaming files in gulp"
+, "description": "A simpler approach to renaming files in gulp."
+, "keywords":
+  [ "gulpplugin"
+  ]
 
 , "contributors":
   [ { "name": "Tomek Wiszniewski"
