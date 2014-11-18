@@ -1,5 +1,5 @@
 { "name": "gulp-simple-rename"
-, "version": "0.1.0"
+, "version": "0.1.2"
 , "description": "A simpler approach to renaming files in gulp."
 , "keywords":
   [ "gulpplugin"
@@ -13,7 +13,7 @@
 
 , "repository":
   { "type": "git"
-  , "url": "https://github.com/tomekwi/gulp-es6-module.git"
+  , "url": "https://github.com/tomekwi/gulp-simple-rename.git"
   }
 
 , "dependencies":
