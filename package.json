@@ -1,5 +1,5 @@
 { "name": "gulp-simple-rename"
-, "version": "0.1.2"
+, "version": "0.1.3"
 , "description": "A simpler approach to renaming files in gulp."
 , "keywords":
   [ "gulpplugin"
