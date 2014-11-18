@@ -4,6 +4,8 @@ gulp-simple-rename
 **A simpler approach to renaming files in [gulp][].**
 
 
+
+
 Usage
 -----
 
@@ -24,6 +26,8 @@ gulp.src('src/*')
 ```
 
 
+
+
 API
 ---
 
@@ -31,11 +35,13 @@ API
 simpleRename(renamingFunction)
 ```
 
-#### `renamingFunction` _[Function]_
+
+#### `renamingFunction(relativePath, originalFile)` _[Function]_
 
 The argument to `simpleRename` should be a simple function. Fed with the relative path of a file, it should return the new relative path.
 
 ##### arguments
+
 The renaming function is passed the following arguments:
 
 - `relativePath` _[String]_ – The path of the streamed file, relative to the base directory. It is the first directory found by a glob – the package [glob-stream][], used by gulp, can tell you more about that.
@@ -45,6 +51,8 @@ The renaming function is passed the following arguments:
 ##### return value
 
 The renaming function should return the new relative path for the file, as a _[String]_.
+
+
 
 
 Why use it
@@ -58,6 +66,11 @@ But sometimes we need robust simplicity (read: flexibility) rather than idiomati
 
 
 
+License
+-------
+
+This software is released under the terms of the [MIT License][].
+
 
 
 <!-- Links -->
@@ -65,3 +78,4 @@ But sometimes we need robust simplicity (read: flexibility) rather than idiomati
 [glob-stream]: https://github.com/wearefractal/glob-stream
 [gulp-rename]: https://github.com/hparra/gulp-rename
 [Vinyl file]: https://github.com/wearefractal/vinyl
+[MIT License]: ./License.md

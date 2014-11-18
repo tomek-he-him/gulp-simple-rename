@@ -4,6 +4,7 @@
 , "keywords":
   [ "gulpplugin"
   ]
+, "license": "MIT"
 
 , "contributors":
   [ { "name": "Tomek Wiszniewski"
