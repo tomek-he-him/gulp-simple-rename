@@ -10,7 +10,7 @@ Usage
 ```js
 var gulp = require('gulp');
 var rename = require('gulp-simple-rename');
-var today = new Date().toISOString().substr(0, 10)); // e.g. 2014-11-18
+var today = new Date().toISOString().substr(0, 10); // e.g. "2014-11-18"
 
 
 // Having a file "src/log for (today).txt",
@@ -38,7 +38,7 @@ The argument to `simpleRename` should be a simple function. Fed with the relativ
 ##### arguments
 The renaming function is passed the following arguments:
 
-- `relativePath` _[String]_ – The path of the streamed file, relative to the base directory (this is the first directory found by a glob – the package [glob-stream][], used by gulp, can tell you more about that.)
+- `relativePath` _[String]_ – The path of the streamed file, relative to the base directory. It is the first directory found by a glob – the package [glob-stream][], used by gulp, can tell you more about that.
 
 - `originalFile` _[File]_ – This argument gives access to the raw [Vinyl file][] object being processed by gulp. In most situations you should be fine without it.
 
