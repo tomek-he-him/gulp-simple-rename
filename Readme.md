@@ -36,7 +36,7 @@ simpleRename(renamingFunction)
 ```
 
 
-#### `renamingFunction(relativePath, originalFile)` _[Function]_
+#### `{Function} renamingFunction(relativePath, originalFile)`
 
 The argument to `simpleRename` should be a simple function. Fed with the relative path of a file, it should return the new relative path.
 
@@ -44,13 +44,13 @@ The argument to `simpleRename` should be a simple function. Fed with the relativ
 
 The renaming function is passed the following arguments:
 
-- `relativePath` _[String]_ – The path of the streamed file, relative to the base directory. It is the first directory found by a glob – the package [glob-stream][], used by gulp, can tell you more about that.
+- `{String} relativePath` – The path of the streamed file, relative to the base directory. It is the first directory found by a glob – the package [glob-stream][], used by gulp, can tell you more about that.
 
-- `originalFile` _[File]_ – This argument gives access to the raw [Vinyl file][] object being processed by gulp. In most situations you should be fine without it.
+- `{File} originalFile` – This argument gives access to the raw [Vinyl file][] object being processed by gulp. In most situations you should be fine without it.
 
 ##### return value
 
-The renaming function should return the new relative path for the file, as a _[String]_.
+The renaming function should return the new relative path for the file, as a `{String}`.
 
 
 
